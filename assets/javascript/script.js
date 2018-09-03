@@ -24,8 +24,20 @@ $(".portfolioObject").on("click", function(){
     modal.modal('show'); 
 });
 
-close.on("click", function(){
+close.on("click", function(e){
+    e.preventDefault();
     modal.modal('hide');
     $("#op-link-btn").empty();
     $("#code-link-btn").empty();
+});
+
+$(window).on("click", (e) => {
+    console.log(modal);
+    if(modal.is(":hidden")){
+        console.log("modal hidden")
+        $("#op-link-btn").empty();
+        $("#code-link-btn").empty();
+    }else{
+        console.log("didnt work")
+    }
 });
