@@ -1,2 +1,2 @@
 # portfolio-updated
-update for week 9
+update for week 18
